@@ -2,9 +2,7 @@ def setup():
     size(600,600)
     background(50, 100, 150)
     frameRate(30)
-    global slownik_kolorow
-    global szer
-    global wys
+    global slownik_kolorow, szer, wys # możńa też jednolinijkowo
     szer = 300
     wys = 0
     
@@ -14,20 +12,20 @@ def setup():
     
     for klucz, wartosc in slownik_kolorow.items():
         lista_kolorow.append(wartosc)
-        global iteracja_programu
-        iteracja_programu = 560
+    global iteracja_programu # wystarczy zadeklarować raz, nie ma potrzeby robić ego w pętli
+    iteracja_programu = 560
 
 
 def draw():
     global iteracja_programu
     iteracja_programu -= 1
-    global szer
-    global wys
+    global szer, wys
     szer -= 1
     wys += 1
     if szer == 0:
         szer = 0
         szer += 1
+    # początek dobry, szkoda, że nie dokończone
     
     stroke(255,255,255)
     strokeWeight(2)
@@ -36,3 +34,5 @@ def draw():
 
     if mousePressed:
         exit()
+
+#1,75pkt
