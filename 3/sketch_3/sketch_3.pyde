@@ -1,4 +1,4 @@
-#Bardzo przepraszam, że praca oddana po terminie. Niestety zostawianie wszystkiego na ostatnią chwilę nigdy nie wychodzi dobrze. Wystąpiły u mnie trobne problemy.
+#Bardzo przepraszam, że praca oddana po terminie. Niestety zostawianie wszystkiego na ostatnią chwilę nigdy nie wychodzi dobrze. Wystąpiły u mnie drobne problemy.
 #Mimo wszystko wstawiam. Dziękuję za uwagę, serdecznie pozdrawiam.
 def setup():
     size(600, 600)
@@ -15,22 +15,21 @@ def draw():
     k = hex(get(mouseX, mouseY)) #zapisanie koloru najechanego elementu do zmiennej k
     print(keyPressed)
     if keyPressed:
-        if keyCode == 37 or keyCode == 39:
-            #text(keyCode, width/2, height) #wyświetlamy niżej kod numeryczny klawisza klawiatury/strzałki
-            fill(225, 215, 0)
-        if key == 'm' or key == 'M':
+        if key == 'm' or key == 'M' or (keyCode == 37):
             fill(225, 215, 0)
             text("M",  width/2-70, height/2)
-            fill(255, 255, 255)
-        if key == 'w' or key == 'W':
+        if key == 'w' or key == 'W' or (keyCode == 39):
             fill(225, 215, 0)
             text("W",  width/2, height/2)
-            fill(255, 255, 255)
-    else:
-        fill(255, 255, 255)
         
     if k != 'FF696969':
         fill(225, 215, 0)
+        if mouseX < width/2:
+            text("M",  width/2-70, height/2)
+            # i tu też jeszcze trzebaby uwzględnić zmianę na strzałki
+        else:
+            text("W",  width/2, height/2)
+    fill(255, 255, 255) # jeżeli robisz to w każdym przypadku, to trzeba wyciągnąć z warunku
             
     s = createShape()
     s.beginShape()
@@ -71,3 +70,8 @@ def draw():
     w.vertex(width/2-160, height/2-160)
     w.endShape(CLOSE)
     shape(w, 55, 75)
+
+# 1,5p
+# plus do aktywności za ramkę - pierwsza klasa i wyróżnia się wśród innych prac
+# uznam mimo spóźnienia, bo jest nieduże, świadome i jak dotąd jednorazowe
+# posprawdzaj jak działą obecnie i przeanalizuj zmiany
