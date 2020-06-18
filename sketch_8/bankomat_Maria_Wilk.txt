@@ -5,14 +5,17 @@ metoda - def wybor_jezyka
 metoda - def wyplata_pieniedzy
 metoda - def wplata_pieniedzy
 metoda - def anuluj_czynnosci
-metoda - def sprawdz_stan_rachunku
-metoda - def zmien_kod_PIN
+metoda - def sprawdz_stan_rachunku # na pewno tu?
+metoda - def obsluz_zmian_kod_PIN
 metoda - def wydrukuj_potwierdzenie
 
-Klasa - Class Klient()
+Klasa - Class Klient() # jeden klient może mieć kilka kart i kont, lepiej wydzielić klasę karta
 atrybut_klasy - stan_konta = stank()
 atrybut - self.stan_konta = stan_konta
 metoda - def wloz_karte
 metoda - def wprowadz_kod_PIN
 metoda - def wyplac_pieniadze
 metoda - def wplac_pieniadze
+
+# dosyć podobne do koleżanki Sierhej...
+# 1,5pkt

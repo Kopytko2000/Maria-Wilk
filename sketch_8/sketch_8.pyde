@@ -56,9 +56,9 @@ def mouseClicked():
     if mouseX >100 and mouseX<200:
         if mouseY >10 and mouseY <30:
             library.lendBook(Madzia.requestBook("Naocznosc"))
+            library.lendBook(Maria.requestBook("Kubus Puchatek")) # nie ma potrzeby powtarzać warunków
         if mouseY >40 and mouseY <60:
             library.addBook(Madzia.returnBook())
-        if mouseY >10 and mouseY <30:
-            library.lendBook(Maria.requestBook("Kubus Puchatek"))
-        if mouseY >40 and mouseY <60:
             library.addBook(Maria.returnBook())
+# 0,5/0,5pkt za tą część
+            
