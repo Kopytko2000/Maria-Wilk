@@ -53,3 +53,5 @@ def draw():
 def mouseClicked():
     for pet in list_of_pets:
         pet.speak()
+        
+# 1,5pkt - brak nadpisania odejmowania, to było w linku do referencji, __sub__ - od substract
