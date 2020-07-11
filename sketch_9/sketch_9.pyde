@@ -20,3 +20,5 @@ def draw():
     finally:
         noFill()
         square(100, 100, 400)
+        
+#2pkt
